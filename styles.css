@@ -1,9 +1,32 @@
 body {
-	background-color: black;
+	background-color: #f5fadb;
+	place-content: center;
+	display: grid;
+	font-family: 'Poppins';
+	height: 100%;
 
 }
 
 svg {
 	width: 20vw;
 	overflow:visible;
+	height: 100vh;
+	
+}
+
+g {
+	overflow:hidden;
+	visibility: hidden;
+}
+
+
+
+.reveal {
+	position: absolute;
+	height: 100vh;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	background: #080808
 }
