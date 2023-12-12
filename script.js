@@ -5,7 +5,7 @@ const tl = gsap.timeline({defaults: {ease: 'power4.out', duration: .7}})
 	})
 
 
-	gsap.set('#Draws', {
+	gsap.set('#Kriss', {
 		xPercent: -50
 	})
 // slowly grows the svg to 1.2
@@ -15,7 +15,7 @@ const tl = gsap.timeline({defaults: {ease: 'power4.out', duration: .7}})
 	})
 
 	tl
-		.from('#Kriss .st0', {
+		.from('#Draws .st0', {
 		yPercent: -200,
 		stagger: .03,
 		skewY: 60,
@@ -24,11 +24,64 @@ const tl = gsap.timeline({defaults: {ease: 'power4.out', duration: .7}})
 		opacity: 0
 	})
 	
-		.from('#Draws .st0', {
+		.from('#Kriss .st0', {
 		yPercent: 215,
 		stagger: .03,
 		skewY: 60,
 		skewX: 30,
 		scaleY: .5,
 		opacity: 0
+	} , '-=.7')
+
+	.to('#Kriss', {
+		xPercent: 0,
+		ease: 'elastic.out(1,.5' //elastic.inOut is also an option
 	})
+
+	.from('#Paintbrush .st1', {
+		xPercent: -107,
+		opacity: 0,
+		ease: 'elastic.out(1,0.5'
+	}, "-=.7")
+
+	.from('#Palette', {
+		xPercent: 90,
+		opacity: 0,
+		stagger: 0.3,
+		ease: 'elastic.out(1,0.5'
+	}, "-=.7")
+
+
+	.to('#Kriss .st0', {
+		skewX: 30,
+		x: 30,
+		scaleX:0,
+		stagger: .03,
+		opacity: 0,
+		duration: .2
+	}, 	'+=1') 
+
+	.to('#Draws', {
+		skewX: 30,
+		x: 30,
+		scaleX:0,
+		stagger: .03,
+		opacity: 0,
+		duration: .2
+	}, 	'<') 
+
+	.to('#Paintbrush', {
+		skewX: 30,
+		x: 30,
+		scaleX:0,
+		stagger: .03,
+		opacity: 0,
+		duration: .2
+	}, 	'<') 
+
+	.to('#Palette', {
+		xPercent: 200,
+		stagger: .03,
+		opacity: 0,
+		duration: .2,
+	}, 	'<') 
