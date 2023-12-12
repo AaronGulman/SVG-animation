@@ -1,0 +1,9 @@
+body {
+	background-color: black;
+
+}
+
+svg {
+	width: 20vw;
+	overflow:visible;
+}
