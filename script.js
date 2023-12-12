@@ -71,12 +71,10 @@ const tl = gsap.timeline({defaults: {ease: 'power4.out', duration: .7}})
 	}, 	'<') 
 
 	.to('#Paintbrush', {
-		skewX: 30,
-		x: 30,
-		scaleX:0,
-		stagger: .03,
-		opacity: 0,
-		duration: .2
+		xPercent:200,
+		duration: 1.3,
+		ease: 'elastic.out(1, .3)'
+		
 	}, 	'<') 
 
 	.to('#Palette', {
@@ -85,3 +83,27 @@ const tl = gsap.timeline({defaults: {ease: 'power4.out', duration: .7}})
 		opacity: 0,
 		duration: .2,
 	}, 	'<') 
+
+	.to('#Paintbrush', {
+		transformOrigin: 'center',
+		scaleX:3,
+		scaleY:3,
+		}, '-=.1')
+
+		.to('#Paintbrush', {
+			yPercent: 500,
+			duration: 3
+			}, '-=.4')
+			
+			.to('#Paintbrush', {
+				yPercent: -2000,
+				xPercent: -100,
+				duration: 3
+				}, '-=.2')	
+
+				.to('.reveal', {
+					scaleY:0,
+					transformOrigin: 'top',
+					duration: 0.8,
+					ease: 'power4.inOut'
+				}, '<')
