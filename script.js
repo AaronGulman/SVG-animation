@@ -122,8 +122,10 @@ const tl = gsap.timeline({defaults: {ease: 'power4.out', duration: .7}})
 
 setTimeout(function() {
 
+	// header part with buttons
 let header = document.createElement('div');
 document.body.appendChild(header);
+header.setAttribute("class", "header");
 
 let homeBtn = document.createElement('button');
 header.appendChild(homeBtn);
@@ -135,6 +137,7 @@ let aboutusBtn = document.createElement('button');
 header.appendChild(aboutusBtn);
 aboutusBtn.textContent ='About Us';
 
+// name of the webpage + caption;
 
 let titleName = document.createElement('div')
 document.body.appendChild(titleName);
@@ -147,6 +150,10 @@ let caption = document.createElement('caption')
 titleName.appendChild(caption);
 caption.textContent = 'Turning imagination into reality';
 
+titleName.setAttribute('class', 'titleName')
+
+// info box that contains a question and provides content made by the artist
+
 let info = document.createElement('div')
 document.body.appendChild(info);
 
@@ -154,10 +161,12 @@ let headerTwo = document.createElement('h2');
 info.appendChild(headerTwo);
 headerTwo.textContent = 'Are you interested?';
 
-
 let para = document.createElement('p');
 info.appendChild(para);
 para.textContent = 'Here are some of my works⬇';
+
+// animation of the header
+
 
 gsap.to(header, {
 	 opacity: 1, 
@@ -166,3 +175,4 @@ gsap.to(header, {
 	}, '<');
 
 }, 6400)
+
