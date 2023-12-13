@@ -1,11 +1,14 @@
 body {
-	background-color: #f5fadb;
+	background: #5f2c82;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #49a09d, #5f2c82);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #49a09d, #5f2c82); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 	display: grid;
 	place-content: center;
-	font-family: 'Poppins';
+	font-family: 'Poppins', sans-serif;
 	height: 100vh;
 	width: 100%;
 	margin: 0;
+	color: white;
 
 }
 
@@ -35,25 +38,61 @@ g {
 
 
 .header {
-	border: 5px solid black;
+	border: 10px solid rgb(0, 0, 0);
+	background-color: rgb(255, 255, 255);
 	position: absolute;
 	display: flex;
-	justify-content: center;
+	justify-content: space-between;
 	margin:auto;
 	padding: 20px;
+	border-radius: 70px 1500px 1500px 1500px;
 	
 }
 
 .titleName {
 	display: flex;
-	border: 5px solid black;
+	border: 30px solid black;
 	position: relative;
-	bottom: 300%;
+	bottom: 230%;
 	justify-content: center;
 	margin:auto;
 	padding: 20px;
 	flex-direction: column;
 	height: 100%;
 	text-align: center;
+	background: black;
+	border-radius: 50px 1500px 1500px 1500px;
 }
 
+button {
+	color:black;
+	background: rgba(146, 170, 208, 0.4);
+	padding: 15px;
+	gap:5px;
+	font-family: 'Courier New', Courier, monospace;
+	font-weight: 900;
+	box-shadow: 1px 3px 5px rgba(255, 255, 255, 0.7);
+	margin-right: 10px;
+	min-width: 100px;
+}
+
+
+button:hover {
+	background-color: white;
+	box-shadow: 4px 4px 10px rgba(255, 255, 255, 0.7);
+	
+}
+
+.info {
+	display: flex;
+	border: 30px solid black;	position: relative;
+	justify-content: center;
+	margin:auto;
+	padding: 20px;
+	flex-direction: column;
+	height: 100%;
+	text-align: center;
+	bottom:100%;
+	border-radius: 50px 1500px 1500px 1500px;
+	background-color:#000000	
+}

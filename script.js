@@ -129,13 +129,13 @@ header.setAttribute("class", "header");
 
 let homeBtn = document.createElement('button');
 header.appendChild(homeBtn);
-homeBtn.textContent ='home';
+homeBtn.textContent ='Home';
 let productsBtn = document.createElement('button');
 header.appendChild(productsBtn);
 productsBtn.textContent ='Products';
 let aboutusBtn = document.createElement('button');
 header.appendChild(aboutusBtn);
-aboutusBtn.textContent ='About Us';
+aboutusBtn.textContent ='About Me';
 
 // name of the webpage + caption;
 
@@ -148,7 +148,7 @@ headerOne.textContent = 'Kris Draws'
 
 let caption = document.createElement('caption')
 titleName.appendChild(caption);
-caption.textContent = 'Turning imagination into reality';
+caption.textContent = 'Turning imaginary into reality';
 
 titleName.setAttribute('class', 'titleName')
 
@@ -164,6 +164,8 @@ headerTwo.textContent = 'Are you interested?';
 let para = document.createElement('p');
 info.appendChild(para);
 para.textContent = 'Here are some of my works⬇';
+
+info.setAttribute('class', 'info')
 
 // animation of the header
 
