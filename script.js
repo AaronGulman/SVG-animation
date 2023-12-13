@@ -6,17 +6,20 @@ const tl = gsap.timeline({defaults: {ease: 'power4.out', duration: .7}})
 
 
 	gsap.set('#Kriss', {
-		xPercent: -50
+		xPercent: -150
+	})
+	gsap.set('#Draws', {
+		xPercent: -20
 	})
 // slowly grows the svg to 1.2
 	gsap.to('svg', {
-		scale: 1.2,
+		scale: 2,
 		duration: 4
 	})
 
 	tl
 		.from('#Draws .st0', {
-		yPercent: -200,
+		yPercent: -300,
 		stagger: .03,
 		skewY: 60,
 		skewX: 30,
@@ -37,15 +40,16 @@ const tl = gsap.timeline({defaults: {ease: 'power4.out', duration: .7}})
 		xPercent: 0,
 		ease: 'elastic.out(1,.5' //elastic.inOut is also an option
 	})
+	
 
-	.from('#Paintbrush .st1', {
-		xPercent: -107,
+	.from('#Paintbrush', {
+		xPercent: -607,
 		opacity: 0,
 		ease: 'elastic.out(1,0.5'
-	}, "-=.7")
+	}, "-=.8")
 
 	.from('#Palette', {
-		xPercent: 90,
+		xPercent: 400,
 		opacity: 0,
 		stagger: 0.3,
 		ease: 'elastic.out(1,0.5'
@@ -54,7 +58,7 @@ const tl = gsap.timeline({defaults: {ease: 'power4.out', duration: .7}})
 
 	.to('#Kriss .st0', {
 		skewX: 30,
-		x: 30,
+		x: 40,
 		scaleX:0,
 		stagger: .03,
 		opacity: 0,
@@ -63,7 +67,7 @@ const tl = gsap.timeline({defaults: {ease: 'power4.out', duration: .7}})
 
 	.to('#Draws', {
 		skewX: 30,
-		x: 30,
+		x: 60,
 		scaleX:0,
 		stagger: .03,
 		opacity: 0,
@@ -93,13 +97,13 @@ const tl = gsap.timeline({defaults: {ease: 'power4.out', duration: .7}})
 		.to('#Paintbrush', {
 			yPercent: 500,
 			duration: 3
-			}, '-=.4')
+			}, '<')
 			
 			.to('#Paintbrush', {
 				yPercent: -2000,
 				xPercent: -100,
 				duration: 3
-				}, '-=.2')	
+				}, '-=1')	
 
 				.to('.reveal', {
 					scaleY:0,
@@ -107,3 +111,58 @@ const tl = gsap.timeline({defaults: {ease: 'power4.out', duration: .7}})
 					duration: 0.8,
 					ease: 'power4.inOut'
 				}, '<')
+
+// 	document.addEventListener("DOMContentLoaded", function() {
+// setTimeout(function(){
+// 	document.querySelector("#header").style.display="block";
+
+// } , 2000)})
+
+// this script runs only after the its predecessor 
+
+setTimeout(function() {
+
+let header = document.createElement('div');
+document.body.appendChild(header);
+
+let homeBtn = document.createElement('button');
+header.appendChild(homeBtn);
+homeBtn.textContent ='home';
+let productsBtn = document.createElement('button');
+header.appendChild(productsBtn);
+productsBtn.textContent ='Products';
+let aboutusBtn = document.createElement('button');
+header.appendChild(aboutusBtn);
+aboutusBtn.textContent ='About Us';
+
+
+let titleName = document.createElement('div')
+document.body.appendChild(titleName);
+
+let headerOne = document.createElement('h1');
+titleName.appendChild(headerOne);
+headerOne.textContent = 'Kris Draws'
+
+let caption = document.createElement('caption')
+titleName.appendChild(caption);
+caption.textContent = 'Turning imagination into reality';
+
+let info = document.createElement('div')
+document.body.appendChild(info);
+
+let headerTwo = document.createElement('h2');
+info.appendChild(headerTwo);
+headerTwo.textContent = 'Are you interested?';
+
+
+let para = document.createElement('p');
+info.appendChild(para);
+para.textContent = 'Here are some of my works⬇';
+
+gsap.to(header, {
+	 opacity: 1, 
+	 duration: 0.2,
+	 ease: 'power4.out' 
+	}, '<');
+
+}, 6400)
